@@ -1,0 +1,18 @@
+{
+  //expanded
+  //compact
+  //compressed
+	"format": "expanded",
+
+	"indent_size": 2,
+  "cascade": true,
+  "max_at_rule_length": 80,
+  "max_selector_length": 80,
+  "max_value_length": 80,
+
+  //On Save File auto format
+  "format_on_save": true,
+
+  //On Save File Filter
+  "format_on_save_filter": "css|sass|scss|less"
+}
