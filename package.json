@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "autoprefixer-core": "^5.1.0",
+    "perfectionist": "^1.4.1",
     "get-stdin": "^4.0.1",
     "postcss": "^4.1.11"
   },
