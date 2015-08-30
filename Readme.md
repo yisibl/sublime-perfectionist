@@ -49,9 +49,16 @@ See also: http://weibo.com/1397442732/BA52YbcdG
 
 ### Method 1: Install from GitHub
 
-1. Open the Command Palette: `Cmd+Shift+P`(OS X) or `Ctrl+Shift+P`(Linux/Window) 
-2. Paste in: `Package Control: Add Repository`
-3. Paste in: `https://github.com/yisibl/sublime-perfectionist`
+1. Run the following command in your Sublime Text packages directory 
+```
+$ git clone https://github.com/yisibl/sublime-perfectionist perfectionist
+```
+
+2. Depending on your OS (and Sublime Text version) the packages directories are:
+
+  * Windows: `%APPDATA%\Sublime Text 3\Packages`
+  * OS X: `~/Library/Application\ Support/Sublime\ Text\ 3/Packages`
+  * Linux: `~/.config/sublime-text-3/packages`
 
 ### Method 2: Download
 
