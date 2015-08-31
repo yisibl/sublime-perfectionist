@@ -57,9 +57,9 @@ $ git clone https://github.com/yisibl/sublime-perfectionist perfectionist
 
 2. Depending on your OS (and Sublime Text version) the packages directories are:
 
-  * Windows: `%APPDATA%\Sublime Text 3\Packages`
-  * OS X: `~/Library/Application\ Support/Sublime\ Text\ 3/Packages`
-  * Linux: `~/.config/sublime-text-3/packages`
+  * Windows: `cd %APPDATA%\Sublime Text 3\Packages`
+  * OS X: `cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages`
+  * Linux: `cd ~/.config/sublime-text-3/packages`
 
 ### Method 2: Download
 
@@ -82,7 +82,7 @@ $ git clone https://github.com/yisibl/sublime-perfectionist perfectionist
 
 This plugin is based on the excellent [Autoprefixer plugin](https://github.com/sindresorhus/sublime-autoprefixer) by Sindre Sorhus.
 
-Thank @Ovilia for reviewing the document.
+Thank [@Ovilia](https://github.com/Ovilia/) for reviewing the document.
 
 * [如何开发Sublime Text2插件](http://www.welefen.com/how-to-develop-sublime-text-plugin.html)
 * [sublime插件开发手记](http://www.hickwu.com/sublime%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91%E6%89%8B%E8%AE%B0)
@@ -91,4 +91,4 @@ Thank @Ovilia for reviewing the document.
 
 ## License
 
-MIT © yisibl [Weibo](http://weibo.com/jieorlin)
+MIT © [yisibl](https://github.com/yisibl/) [Weibo](http://weibo.com/jieorlin)
