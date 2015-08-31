@@ -91,4 +91,4 @@ Thank [@Ovilia](https://github.com/Ovilia/) for reviewing the document.
 
 ## License
 
-MIT © [yisibl](https://github.com/yisibl/) [Weibo](http://weibo.com/jieorlin)
+MIT © [yisibl](https://github.com/yisibl/) ([Weibo](http://weibo.com/jieorlin))
