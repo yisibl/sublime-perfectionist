@@ -38,7 +38,8 @@ Powered by [perfectionist](https://github.com/ben-eb/perfectionist)
 
 ## Installation
 
-First of all, you need to have Node.js installed.
+**First of all, you need to have Node.js installed.**
+
 Make sure it's in your `$PATH` by running `node -v` in your command-line.
 
 > Note: On OS X it's expected that Node should reside in the `/usr/local/bin/` folder, 
