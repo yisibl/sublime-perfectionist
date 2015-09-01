@@ -1,0 +1,4 @@
+# 1.2.0 2015-09-01
+
+* Add filter file.
+* Change the shortcut key only for expanded.

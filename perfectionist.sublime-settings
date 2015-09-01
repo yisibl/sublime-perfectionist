@@ -2,7 +2,7 @@
   //expanded
   //compact
   //compressed
-  "format": "compressed",
+  "format": "expanded",
   "indent_size": 2,
   "cascade": true,
   "max_at_rule_length": 80,
