@@ -86,7 +86,7 @@ class BeautifyOnSave(sublime_plugin.EventListener):
             return
 
         file_filter = view.settings().get('format_on_save_filter', settings.get(
-            'format_on_save_filter', 'css|sass|scss|less'))
+            'format_on_save_filter', 'css|scss'))
         filter_region_concat = '\.(' + file_filter + ')$'
         if not re.search(filter_region_concat, view.file_name()):
             return

@@ -1,0 +1,14 @@
+Thank you for installing sublime-perfectionist(^ω^).
+
+
+## Usage
+
+* Open the Command Palette: `Cmd+Shift+P`(OSX) or `Ctrl+Shift+P`(Linux/Window), entry `CSS Perfectionist`.
+* Context Menu: `CSS perfectionist`.
+* Shortcut keys: `Cmd+Shift+E`(OS X)/`Ctrl+Shift+E`(Linux/Window).
+
+## Issues
+
+Please report issues here: https://github.com/yisibl/sublime-perfectionist/issues
+
+Created by yisibl ([Weibo](http://weibo.com/jieorlin))

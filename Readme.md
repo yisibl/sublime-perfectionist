@@ -1,6 +1,6 @@
 # sublime-perfectionist
 
-> A Powerful Sublime Text plugin to beautify your CSS!
+> A powerful Sublime Text plugin to beautify your CSS!
 
 Powered by [perfectionist](https://github.com/ben-eb/perfectionist)
 
@@ -38,7 +38,7 @@ Powered by [perfectionist](https://github.com/ben-eb/perfectionist)
 
 ## Installation
 
-**First of all, you need to have Node.js installed.**
+**First of all, you need to have [Node.js](https://nodejs.org/) installed.**
 
 Make sure it's in your `$PATH` by running `node -v` in your command-line.
 
@@ -48,7 +48,34 @@ symlink your Node binary to this location. For example, if you used nvm:
 `ln -s -f /Users/#{username}/.nvm/versions/#{nodeVersion}/bin/node /usr/local/bin/node`  
 See also: http://weibo.com/1397442732/BA52YbcdG
 
-### Method 1: Install from GitHub
+
+### Method 1: Package Control(Recommend)
+
+You need to have `Package Control` installed.
+
+* Open: `View > Show Console` menu.
+* Once open, paste the appropriate Python code for your version of Sublime Text into the console.
+
+Sublime Text 3:
+
+```python
+import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
+```
+
+Sublime Text 2:
+
+```python
+import urllib2,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')
+```
+Then
+
+1. Open the Command Palette: `Cmd+Shift+P`(OSX) or `Ctrl+Shift+P`(Linux/Window).
+2. Entry: `Package Control: Install Package` or just `pcip`.
+3. Entry: `perfectionist`.
+4. Windows users will need to restart Sublime Text to finish the installation.
+
+
+### Method 2: Install from GitHub
 
 1. Run the following command in your Sublime Text packages directory 
 ```
@@ -61,9 +88,9 @@ $ git clone https://github.com/yisibl/sublime-perfectionist perfectionist
   * OS X: `cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages`
   * Linux: `cd ~/.config/sublime-text-3/packages`
 
-### Method 2: Download
+### Method 3: Download
 
-1. Download the source zip from Github.
+1. Download the [source zip](https://github.com/yisibl/sublime-perfectionist/archive/master.zip) from Github.
 2. Open Sublime Text menu `Preferences > Browse Packages`.
 3. Extract it into a new folder named 'perfectionist' in your Sublime Text "Packages" folder.
 4. Restart Sublime Text.
@@ -71,12 +98,34 @@ $ git clone https://github.com/yisibl/sublime-perfectionist perfectionist
 
 ## Usage
 
-1. Open the Command Palette: `Cmd+Shift+P`(OSX) or `Ctrl+Shift+P`(Linux/Window).
-2. Choose: `CSS Perfectionist`, or use the shortcut keys `Cmd+Shift+E`(OS X)/`Ctrl+Shift+E`(Linux/Window).
+* Open the Command Palette: `Cmd+Shift+P`(OSX) or `Ctrl+Shift+P`(Linux/Window), entry `CSS Perfectionist`.
+* Context Menu: `CSS perfectionist`.
+* Shortcut keys: `Cmd+Shift+E`(OS X)/`Ctrl+Shift+E`(Linux/Window).
 
 ## Options
 
-`Preferences` > `Package Settings` > `Perfectionist` > `Settings - User`
+### format_on_save
+
+* Type: `boolean`
+* Default: `true`
+
+Automatically format when a file is saved.
+
+### format_on_save_filter
+
+* Type: `string`
+* Default: `css|scss`
+
+If `format_on_save` is true, automatic formatting in these files.
+
+More options, see also: https://github.com/ben-eb/perfectionist#options
+
+## Settings
+
+1. Open `Preferences` > `Package Settings` > `Perfectionist` > `Settings - Default`.
+2. Copy code.
+3. Open `Preferences` > `Package Settings` > `Perfectionist` > `Settings - User`.
+4. Paste and modify.
 
 ## Acknowledgements
 
@@ -91,4 +140,6 @@ Thank [@Ovilia](https://github.com/Ovilia/) for reviewing the document.
 
 ## License
 
-MIT © [yisibl](https://github.com/yisibl/) ([Weibo](http://weibo.com/jieorlin))
+MIT License
+
+Created by [yisibl](https://github.com/yisibl/) ([Weibo](http://weibo.com/jieorlin))
