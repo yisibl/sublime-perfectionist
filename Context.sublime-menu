@@ -2,6 +2,23 @@
   "caption": "CSS Perfectionist",
   "children": [{
     "caption": "Expanded",
-    "command": "perfectionist"
+    "command": "perfectionist",
+    "args": {
+      "action": "expanded"
+    }
+  },
+  {
+    "caption": "Compact",
+    "command": "perfectionist",
+    "args": {
+      "action": "compact"
+    }
+  },
+  {
+    "caption": "Compressed",
+    "command": "perfectionist",
+    "args": {
+      "action": "compressed"
+    }
   }]
 }]

@@ -4,16 +4,6 @@ import json
 import re
 from os.path import dirname, realpath, join
 
-import sys
-import subprocess
-import codecs
-import webbrowser
-
-try:
-    import commands
-except ImportError:
-    pass
-
 try:
     # Python 2
     from node_bridge import node_bridge
@@ -30,11 +20,11 @@ BIN_PATH = join(sublime.packages_path(), dirname(
 
 class PerfectionistCommand(sublime_plugin.TextCommand):
 
-    def run(self, edit):
+    def run(self, edit, action='expanded'):
         if not self.has_selection():
             region = sublime.Region(0, self.view.size())
             originalBuffer = self.view.substr(region)
-            beautified = self.beautify(originalBuffer)
+            beautified = self.beautify(originalBuffer, action)
             if beautified:
                 self.view.replace(edit, region, beautified)
             return
@@ -42,14 +32,14 @@ class PerfectionistCommand(sublime_plugin.TextCommand):
             if region.empty():
                 continue
             originalBuffer = self.view.substr(region)
-            beautified = self.beautify(originalBuffer)
+            beautified = self.beautify(originalBuffer, action)
             if beautified:
                 self.view.replace(edit, region, beautified)
 
-    def beautify(self, data):
+    def beautify(self, data, action):
         try:
             return node_bridge(data, BIN_PATH, [json.dumps({
-                'format': self.get_setting('format'),
+                'format': action,
                 'indentSize': self.get_setting('indent_size'),
                 'cascade': self.get_setting('cascade'),
                 'maxAtRuleLength': self.get_setting('max_at_rule_length'),
@@ -96,4 +86,4 @@ class BeautifyOnSave(sublime_plugin.EventListener):
         if not format_action:
             return
 
-        view.run_command('perfectionist')
+        view.run_command('perfectionist', {'action': format_action})

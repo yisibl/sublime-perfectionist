@@ -80,7 +80,6 @@ Then
 ```
 $ git clone https://github.com/yisibl/sublime-perfectionist perfectionist
 ```
-
 2. Depending on your OS (and Sublime Text version), the packages directories are 
 
   * Windows: `cd %APPDATA%\Sublime Text 3\Packages`

@@ -1,4 +1,21 @@
 [{
-  "caption": "CSS Perfectionist",
-  "command": "perfectionist"
+  "caption": "CSS Perfectionist: Expanded",
+  "command": "perfectionist",
+  "args": {
+    "action": "expanded"
+  }
+},
+{
+  "caption": "CSS Perfectionist: Compact",
+  "command": "perfectionist",
+  "args": {
+    "action": "compact"
+  }
+},
+{
+  "caption": "CSS Perfectionist: Compressed",
+  "command": "perfectionist",
+  "args": {
+    "action": "compressed"
+  }
 }]
