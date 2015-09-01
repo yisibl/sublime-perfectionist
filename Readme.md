@@ -109,10 +109,10 @@ $ git clone https://github.com/yisibl/sublime-perfectionist perfectionist
 
 Automatically format when a file is saved.
 
-### format_on_save_filter
+### file_filter
 
 * Type: `string`
-* Default: `css|scss`
+* Default: `css,scss,less,html,htm`
 
 If `format_on_save` is true, automatic formatting in these files.
 

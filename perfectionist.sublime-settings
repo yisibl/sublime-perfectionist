@@ -2,7 +2,7 @@
   //expanded
   //compact
   //compressed
-  "format": "expanded",
+  "format": "compressed",
   "indent_size": 2,
   "cascade": true,
   "max_at_rule_length": 80,
@@ -13,5 +13,5 @@
   "format_on_save": true,
 
   //On Save File Filter
-  "format_on_save_filter": "css|scss"
+  "file_filter": "css,scss,less,html,htm"
 }

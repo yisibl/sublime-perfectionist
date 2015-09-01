@@ -1,7 +1,8 @@
 import sublime
 import sublime_plugin
-import json
+import os
 import re
+import json
 from os.path import dirname, realpath, join
 
 try:
@@ -24,17 +25,17 @@ class PerfectionistCommand(sublime_plugin.TextCommand):
         if not self.has_selection():
             region = sublime.Region(0, self.view.size())
             originalBuffer = self.view.substr(region)
-            beautified = self.beautify(originalBuffer, action)
-            if beautified:
-                self.view.replace(edit, region, beautified)
+            code = self.beautify(originalBuffer, action)
+            if code:
+                self.view.replace(edit, region, code)
             return
         for region in self.view.sel():
             if region.empty():
                 continue
             originalBuffer = self.view.substr(region)
-            beautified = self.beautify(originalBuffer, action)
-            if beautified:
-                self.view.replace(edit, region, beautified)
+            code = self.beautify(originalBuffer, action)
+            if code:
+                self.view.replace(edit, region, code)
 
     def beautify(self, data, action):
         try:
@@ -47,7 +48,7 @@ class PerfectionistCommand(sublime_plugin.TextCommand):
                 'maxValueLength': self.get_setting('max_value_length')
             })])
         except Exception as e:
-            sublime.error_message('perfectionist\n%s' % e)
+            sublime.error_message('Perfectionist\n%s' % e)
 
     def has_selection(self):
         for sel in self.view.sel():
@@ -62,9 +63,22 @@ class PerfectionistCommand(sublime_plugin.TextCommand):
             settings = sublime.load_settings('perfectionist.sublime-settings')
         return settings.get(key)
 
+    # Filter file
+    def is_visible(self):
+        view = self.view
+        file_name = view.file_name()
+        syntax_path = view.settings().get('syntax')
+        suffix_array = self.get_setting('filter_file').split(',')
+        suffix = ''
+        syntax = ''
+
+        if file_name != None:  # file exists, pull syntax type from extension
+            suffix = os.path.splitext(file_name)[1][1:]
+        if syntax_path != None:
+            syntax = os.path.splitext(syntax_path)[0].split('/')[-1].lower()
+        return suffix in suffix_array or syntax in suffix_array
+
 # On Save File auto format
-
-
 class BeautifyOnSave(sublime_plugin.EventListener):
 
     def on_pre_save(self, view):
@@ -75,9 +89,10 @@ class BeautifyOnSave(sublime_plugin.EventListener):
         if not should_format:
             return
 
-        file_filter = view.settings().get('format_on_save_filter', settings.get(
-            'format_on_save_filter', 'css|scss'))
+        file_filter = view.settings().get('file_filter', settings.get(
+            'file_filter', 'css,scss,less,html,htm')).replace(',', '|')
         filter_region_concat = '\.(' + file_filter + ')$'
+
         if not re.search(filter_region_concat, view.file_name()):
             return
 
