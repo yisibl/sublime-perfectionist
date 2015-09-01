@@ -1,4 +1,4 @@
-# sublime-perfectionist
+# [sublime-perfectionist](https://packagecontrol.io/packages/Perfectionist)
 
 > A powerful Sublime Text plugin to beautify your CSS!
 
