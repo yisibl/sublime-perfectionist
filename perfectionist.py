@@ -68,7 +68,7 @@ class PerfectionistCommand(sublime_plugin.TextCommand):
         view = self.view
         file_name = view.file_name()
         syntax_path = view.settings().get('syntax')
-        suffix_array = self.get_setting('filter_file').split(',')
+        suffix_array = self.get_setting('file_filter').split(',')
         suffix = ''
         syntax = ''
 
@@ -89,9 +89,9 @@ class BeautifyOnSave(sublime_plugin.EventListener):
         if not should_format:
             return
 
-        file_filter = view.settings().get('file_filter', settings.get(
+        file_filter_list = view.settings().get('file_filter', settings.get(
             'file_filter', 'css,scss,less,html,htm')).replace(',', '|')
-        filter_region_concat = '\.(' + file_filter + ')$'
+        filter_region_concat = '\.(' + file_filter_list + ')$'
 
         if not re.search(filter_region_concat, view.file_name()):
             return

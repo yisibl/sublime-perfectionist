@@ -1,24 +1,99 @@
-[{
-  "caption": "CSS Perfectionist",
-  "children": [{
-    "caption": "Expanded",
-    "command": "perfectionist",
-    "args": {
-      "action": "expanded"
-    }
-  },
+[
   {
-    "caption": "Compact",
-    "command": "perfectionist",
-    "args": {
-      "action": "compact"
-    }
-  },
-  {
-    "caption": "Compressed",
-    "command": "perfectionist",
-    "args": {
-      "action": "compressed"
-    }
-  }]
-}]
+    "caption": "CSS Perfectionist",
+    "children": [
+      {
+        "caption": "Expanded",
+        "command": "perfectionist",
+        "args": {
+          "action": "expanded"
+        }
+      },
+      {
+        "caption": "Compact",
+        "command": "perfectionist",
+        "args": {
+          "action": "compact"
+        }
+      },
+      {
+        "caption": "Compressed",
+        "command": "perfectionist",
+        "args": {
+          "action": "compressed"
+        }
+      },
+      {
+        "caption": "-"
+      },
+      {
+        "command": "open_file",
+        "args": {
+          "file": "${packages}/perfectionist/perfectionist.sublime-settings"
+        },
+        "caption": "Settings – Default"
+      },
+      {
+        "command": "open_file",
+        "args": {
+          "file": "${packages}/User/perfectionist.sublime-settings"
+        },
+        "caption": "Settings – User"
+      },
+      {
+        "caption": "-"
+      },
+      {
+        "command": "open_file",
+        "args": {
+          "file": "${packages}/perfectionist/Default (OSX).sublime-keymap",
+          "platform": "OSX"
+        },
+        "caption": "Key Bindings – Default"
+      },
+      {
+        "command": "open_file",
+        "args": {
+          "file": "${packages}/perfectionist/Default (Linux).sublime-keymap",
+          "platform": "Linux"
+        },
+        "caption": "Key Bindings – Default"
+      },
+      {
+        "command": "open_file",
+        "args": {
+          "file": "${packages}/perfectionist/Default (Windows).sublime-keymap",
+          "platform": "Windows"
+        },
+        "caption": "Key Bindings – Default"
+      },
+      {
+        "command": "open_file",
+        "args": {
+          "file": "${packages}/User/Default (OSX).sublime-keymap",
+          "platform": "OSX"
+        },
+        "caption": "Key Bindings – User"
+      },
+      {
+        "command": "open_file",
+        "args": {
+          "file": "${packages}/User/Default (Linux).sublime-keymap",
+          "platform": "Linux"
+        },
+        "caption": "Key Bindings – User"
+      },
+      {
+        "command": "open_file",
+        "args": {
+          "file": "${packages}/User/Default (Windows).sublime-keymap",
+          "platform": "Windows"
+        },
+        "caption": "Key Bindings – User"
+      },
+      {
+        "caption": "-"
+      }
+    ]
+  }
+]

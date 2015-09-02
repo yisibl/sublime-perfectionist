@@ -1,0 +1,22 @@
+# 1.2.1 2015-09-02
+
+* Context menu add open settings file and shortcut key file
+* Fix can not correctly read the file filter list.
+
+
+# 1.2.0 2015-09-01
+
+* Add filter file.
+* Change the shortcut key only for expanded.
+
+
+# 1.1.0 2015-09-01
+
+* Add more compression options for context menu and Command Palette.
+
+
+# 1.0.1 2015-09-01
+
+* Released to Control Package.
+* Improve documentation.
+* Add installation message.
