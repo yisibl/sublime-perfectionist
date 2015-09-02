@@ -1,7 +1,11 @@
-[{
-  "keys": ["ctrl+shift+e"],
-  "command": "perfectionist",
-  "args": {
-    "action": "expanded"
+[
+  {
+    "keys": [
+      "ctrl+shift+e"
+    ],
+    "command": "perfectionist",
+    "args": {
+      "action": "auto"
+    }
   }
-}]
+]

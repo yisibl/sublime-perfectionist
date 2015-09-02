@@ -22,6 +22,9 @@ BIN_PATH = join(sublime.packages_path(), dirname(
 class PerfectionistCommand(sublime_plugin.TextCommand):
 
     def run(self, edit, action='expanded'):
+        if action == 'auto':
+            action = self.get_setting('format')
+
         if not self.has_selection():
             region = sublime.Region(0, self.view.size())
             originalBuffer = self.view.substr(region)

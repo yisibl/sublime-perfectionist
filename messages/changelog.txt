@@ -1,18 +1,22 @@
+# 1.2.2 2015-09-02
+
+* Add: Use the shortcut key format reads the configuration file.
+
 # 1.2.1 2015-09-02
 
-* Context menu add open settings file and shortcut key file
-* Fix can not correctly read the file filter list.
+* Add: Context menu add open settings file and shortcut key file.
+* Fix: Can not correctly read the file filter list.
 
 
 # 1.2.0 2015-09-01
 
-* Add filter file.
-* Change the shortcut key only for expanded.
+* Add: The filter file.
+* Change: The shortcut key only for expanded.
 
 
 # 1.1.0 2015-09-01
 
-* Add more compression options for context menu and Command Palette.
+* Add: More compression options for context menu and Command Palette.
 
 
 # 1.0.1 2015-09-01
