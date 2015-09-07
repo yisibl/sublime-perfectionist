@@ -1,3 +1,8 @@
+# 2.0.0 2015-09-07
+
+* Add: Support SCSS syntax.
+* Change: html/htm file is disabled by default.
+
 # 1.2.2 2015-09-02
 
 * Add: Use the shortcut key format reads the configuration file.
