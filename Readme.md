@@ -9,29 +9,38 @@ Powered by [perfectionist](https://github.com/ben-eb/perfectionist)
 
 **Input:**
 
-```css
+```scss
 /*sublime-perfectionist test*/
 @media screen {
 .foo { & > .bar {
-  -webkit-transform: scale(0);/*commment*/
+  -webkit-transform: scale(0);//commment
   -ms-transform: scale(0);-o-transform: scale(0);
   transform: scale(0);}}
+}
+@for $i from 1 through 3 {
+.item-#{$i}{display: inline-block;}
 }
 ```
 
 **Output:**
 
-```css
+```scss
 /*sublime-perfectionist test*/
 
 @media screen {
   .foo {
     & > .bar {
-      -webkit-transform: scale(0); /*commment*/
+      -webkit-transform: scale(0); //commment
           -ms-transform: scale(0);
            -o-transform: scale(0);
               transform: scale(0);
     }
+  }
+}
+
+@for $i from 1 through 3 {
+  .item-#{$i} {
+    display: inline-block;
   }
 }
 ```

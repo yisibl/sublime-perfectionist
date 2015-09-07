@@ -1,8 +1,10 @@
 {
   "dependencies": {
-    "perfectionist": "^1.4.1",
+    "postcss": "^5.0.4",
     "get-stdin": "^4.0.1",
-    "postcss": "^4.1.11"
+    "perfectionist": "^2.0.0",
+    "postcss-scss": "^0.1.2",
+    "postcss-safe-parser": "^1.0.1"
   },
   "engines": {
     "node": ">=0.10.0"

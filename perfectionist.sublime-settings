@@ -13,5 +13,5 @@
   "format_on_save": true,
 
   //On Save File Filter
-  "file_filter": "css,scss,less,html,htm"
+  "file_filter": "css,scss"
 }
