@@ -77,7 +77,7 @@ Sublime Text 2:
 
 Then
 
-1. Open the Command Palette: `Cmd + Shift + P`(OS X) or `Ctrl + Shift + P`(Window/Linux).
+1. Open the Command Palette: <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>(OS X) or <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>(Window/Linux).
 2. Input: `Package Control: Install Package` or just `pcip`.
 3. Input: `perfectionist`.
 4. Windows users will need to restart Sublime Text to finish the installation.
@@ -85,11 +85,11 @@ Then
 
 ### Method 2: Install from GitHub
 
-1. Run the following command in your Sublime Text packages directory 
+1. Run the following command in your Sublime Text packages directory
 ```
 $ git clone https://github.com/yisibl/sublime-perfectionist perfectionist
 ```
-2. Depending on your OS (and Sublime Text version), the packages directories are 
+2. Depending on your OS (and Sublime Text version), the packages directories are
 
   * Windows: `cd %APPDATA%\Sublime Text 3\Packages`
   * OS X: `cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages`
@@ -105,9 +105,9 @@ $ git clone https://github.com/yisibl/sublime-perfectionist perfectionist
 
 ## Usage
 
-* Open the Command Palette: `Cmd + Shift + P`(OS X) or `Ctrl + Shift + P`(Window/Linux), input `CSS Perfectionist`.
+* Open the Command Palette: <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>(OS X) or <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>(Window/Linux), input `CSS Perfectionist`.
 * Context Menu: `CSS perfectionist`.
-* Shortcut keys: `Cmd + Shift + E`(OS X)/`Ctrl + Shift + E`(Window/Linux).
+* Shortcut keys: <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd>(OS X)/<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>E</kbd>(Window/Linux).
 
 ## Options
 
